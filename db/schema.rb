@@ -26,7 +26,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_20_140109) do
 
   create_table "orders", force: :cascade do |t|
     t.float "amount"
-    t.integer "status", default: 0
     t.string "cart_data"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -36,7 +35,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_20_140109) do
 
   create_table "phones", force: :cascade do |t|
     t.string "name"
-    t.string "type"
     t.integer "price"
     t.string "description"
     t.string "size"
@@ -52,7 +50,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_20_140109) do
     t.string "username"
     t.string "email"
     t.string "password_digest"
-    t.integer "type", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
